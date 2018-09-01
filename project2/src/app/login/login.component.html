@@ -46,12 +46,18 @@
   <div class="logincard">
     <div class="inputcontainer">
       <!-- <fa name="user"></fa> -->
-      <input type="text" class="inputbox" placeholder="Username">
+      <mat-form-field style="width: 100%">
+        <input matInput placeholder="Username">
+      </mat-form-field>
+      <!-- <input type="text" class="inputbox" placeholder="Username"> -->
     </div>
 
     <div class="inputcontainer">
-        <!-- <fa name="unlock-alt"></fa> -->
-      <input type="password" class="inputbox" placeholder="Password">
+      <!-- <fa name="unlock-alt"></fa> -->
+      <mat-form-field style="width: 100%">
+        <input matInput type="password" placeholder="Password">
+      </mat-form-field>
+      <!-- <input type="password" class="inputbox" placeholder="Password"> -->
     </div>
 
     <button mat-raised-button color="primary" class="loginbtn">Login</button>

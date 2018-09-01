@@ -602,10 +602,7 @@
 
 .inputcontainer {
 	margin-bottom: 10px;
-	padding: 12px;
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border-radius: 2px;
+	padding: 0px 12px;
 }
 
 .inputbox {

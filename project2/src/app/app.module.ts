@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    AngularFontAwesomeModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
