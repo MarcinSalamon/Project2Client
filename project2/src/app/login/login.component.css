@@ -247,16 +247,23 @@
     background: black;
   }
   .dog .head2 .nose2 {
-    height: 30px;
+    /* height: 30px;
     width: 45px;
     position: relative;
     top: 40px;
     left: 37px;
     border-radius: 20px;
+    background: #FBF1D8; */
+    height: 22px;
+    width: 22px;
+    position: relative;
+    top: 40px;
+    left: 40px;
+    border-radius: 20px;
     background: #FBF1D8;
   }
   .dog .head2 .nose2::before {
-    display: block;
+    /* display: block;
     content: "";
     height: 0;
     width: 0;
@@ -265,6 +272,27 @@
     left: 9px;
     border-radius: 10px;
     border-top: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; */
+    display: block;
+    content: "";
+    height: 22px;
+    width: 22px;
+    position: relative;
+    left: 22px;
+    border-radius: 20px;
+    background: #FBF1D8;
+  }
+  .dog .head2 .nose2::after {
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    position: relative;
+    top: -22px;
+    left: 12px;
+    border-radius: 10px;
+    border-top: 10px solid #FFA5C0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
   }
@@ -613,9 +641,9 @@
 	transition: border .15s linear;
 }
 
-.loginbtn:hover {
+/* .loginbtn:hover {
 	background-color: #411e80;
-}
+} */
 
 .registerbtn {
 	width: 100%;
@@ -639,9 +667,9 @@
 	transition: border .15s linear;
 }
 
-.registerbtn:hover {
+/* .registerbtn:hover {
 	background-color: #d2ab18;
-}
+} */
 
 .header {
 	background-color: #f7f7f7;
