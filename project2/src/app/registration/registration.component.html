@@ -1,3 +1,6 @@
+<!-- <body id="bg"> -->
+<!-- <html class="bg"> -->
+<div class="bg">
 <form class="registration-form">
   <mat-form-field class="registration-full-width">
     <input matInput placeholder="Email" [formControl]="emailFormControl">
@@ -23,8 +26,17 @@
   <mat-form-field class="registration-full-width">
     <input matInput placeholder="Confirm Password" [type]="hide ? 'password' : 'text'" [formControl]="confirmPasswordFormControl">
     <mat-error *ngIf="!confirmPasswordFormControl.hasError('required')">
-      Please enter a matching
+      Passwords don't match
     </mat-error>
   </mat-form-field>
-  <button mat-raised-button color="primary">Submit</button>
+  <button style="border-radius:10px"mat-raised-button color="primary">Register</button>
 </form>
+<div id="cats">
+<img class="cat" id="blue" src="https://goo.gl/CU1QpY" alt=""/>
+<img class="cat" id="gray" src="https://goo.gl/YsiIDx" alt=""/>
+<img class="cat" id="yellow" src="https://goo.gl/a6tFK5" alt=""/>
+<!-- <div id="cross"></div> -->
+</div>
+</div>
+<!-- </html> -->
+<!-- </body> -->
