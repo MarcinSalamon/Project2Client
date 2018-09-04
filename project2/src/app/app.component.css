@@ -1,0 +1,10 @@
+.col-md-3 {
+    float: left;
+    padding: 0;
+}
+
+.col-md-9 {
+    float: left;
+    padding: 0;
+    background: #FFCA95;
+}

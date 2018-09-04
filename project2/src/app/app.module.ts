@@ -6,11 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { FriendsListComponent } from './friends-list/friends-list.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FriendsListComponent
+    FriendsListComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

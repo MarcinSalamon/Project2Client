@@ -9,14 +9,14 @@ html, body {
     display: block;
     margin: 0;
     padding: 0;
-    width: 300px;
+    width: 316px;
     height: 100%;
     background: #EEE;
     list-style-type: none;
   }
   
   .friend {
-    width: 300px;
+    width: 316px;
     height: 60px;
     background: #EEE;
     border-bottom: 1px solid #DDD;
