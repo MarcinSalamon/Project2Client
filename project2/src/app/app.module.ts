@@ -22,7 +22,7 @@ import { AppRoutingModule } from './/app-routing.module';
     MatButtonModule,
 
     AngularFontAwesomeModule,
-    MatInputModule
+    MatInputModule,
     AppRoutingModule
 
   ],
