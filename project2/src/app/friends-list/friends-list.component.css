@@ -51,3 +51,8 @@ html, body {
   .friend:not(.selected):hover {
     background: #DDD;
   }
+
+  .friend .title {
+      text-align: center;
+      text-decoration-color: black; 
+  }
