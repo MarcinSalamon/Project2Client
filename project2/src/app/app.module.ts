@@ -4,9 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+
 import { LoginComponent } from './login/login.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {MatInputModule} from '@angular/material/input';
+import { AppRoutingModule } from './/app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -17,8 +20,11 @@ import {MatInputModule} from '@angular/material/input';
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+
     AngularFontAwesomeModule,
     MatInputModule
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
