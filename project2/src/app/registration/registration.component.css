@@ -8,8 +8,8 @@
 
 .registration-full-width{
     width: 300px;
-    text-align:center;
-    margin-left:44px;
+    text-align: center;
+    margin-left: 44px;
     /* color:rgb(236, 236, 26) */
 }
 
@@ -22,13 +22,12 @@
   } */
   
   .bg{
-      background-color: #282f44;
-      max-width:400px;
-      margin-top:70px;
-      margin-left:450px;
+      background-color: #FFCA95;
+      max-width: 400px;
+      margin: 135px auto;
       border-radius: 22px;
-      text-align:center;
-      padding:10px;
+      text-align: center;
+      padding: 10px;
   }
 
   .cat {
@@ -74,6 +73,6 @@
   }
   
   #cats{
-      top:260px;
-      position:relative;
+    top: 260px;
+    position: relative;
   }
