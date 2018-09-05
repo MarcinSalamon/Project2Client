@@ -6,6 +6,6 @@ export class Users {
     salt: string;
     email: string;
     username: string;
-    friendsList: string;
+    friendsListId: string;
     onlineStatus: boolean;
 }
