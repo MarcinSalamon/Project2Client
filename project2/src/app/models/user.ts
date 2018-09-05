@@ -1,9 +1,10 @@
 export class User {
-    u_id: number;
-    username: string;
-    pw_hash: string;
+    uId: number;
     fname: string;
     lname: string;
+    password: string;
     email: string;
-    online_status: string;
+    username: string;
+    friendsListId: string;
+    onlineStatus: boolean;
 }
