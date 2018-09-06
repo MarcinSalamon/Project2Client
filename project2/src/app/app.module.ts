@@ -11,14 +11,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LoginComponent } from './login/login.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import {MatInputModule} from '@angular/material/input';
 import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationComponent
+    RegistrationComponent,
     LoginComponent
   ],
   imports: [
@@ -28,7 +27,7 @@ import { AppRoutingModule } from './/app-routing.module';
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     AngularFontAwesomeModule,
     AppRoutingModule
   ],
