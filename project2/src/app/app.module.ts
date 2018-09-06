@@ -19,7 +19,7 @@ import { AppRoutingModule } from './/app-routing.module';
   declarations: [
     AppComponent,
     RegistrationComponent,
-    ChatboxComponent
+    ChatboxComponent,
     LoginComponent
   ],
   imports: [
