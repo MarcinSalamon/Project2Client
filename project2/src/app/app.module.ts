@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ChatboxComponent } from './chatbox/chatbox.component';
 
 import { LoginComponent } from './login/login.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './/app-routing.module';
   declarations: [
     AppComponent,
     RegistrationComponent,
+    ChatboxComponent
     LoginComponent
   ],
   imports: [
