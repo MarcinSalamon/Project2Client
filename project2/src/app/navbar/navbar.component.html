@@ -1,3 +1,19 @@
-<p>
-  navbar works!
-</p>
+<div class="wrapper">
+	<!-- <div class="nav-container"> -->
+	<div class="nav-container">
+		<nav class="navbar navbar-expand-lg header">
+			<a routerLink="landing">
+				<img src="https://s33.postimg.cc/nfppu2pbj/revature-logo.png" height="36" />
+			</a>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="navli" routerLink="profile"><span class="underline">Profile</span></a>
+					<!-- <a *ngIf="this.loggedUser.role == 2" class="navli"><span class="underline">Register Employee</span></a> -->
+				</div>
+			</div>
+			<a class="navbtn" id="toLogout" (click)="logout()" routerLink="">
+        <fa name="sign-out"></fa>
+      </a>
+		</nav>
+	</div>
+</div>
