@@ -20,11 +20,17 @@
     overflow: hidden;
     background-color: #282f44;
   } */
+
+  .background {
+    background-color: #e91e63;
+    height: 603px;
+    padding-top: 100px;
+}
   
   .bg{
       background-color: #FFCA95;
       max-width: 400px;
-      margin: 135px auto;
+      margin: auto;
       border-radius: 22px;
       text-align: center;
       padding: 10px;
