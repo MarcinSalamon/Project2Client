@@ -9,6 +9,7 @@
 .navbtn {
 	cursor: pointer;
 	padding: 6px 10px;
+	margin-right: 5px;
 	border-radius: 50%;
 	border-style: solid;
 	border-width: 1px;
