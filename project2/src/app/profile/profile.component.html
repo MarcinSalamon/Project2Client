@@ -1,53 +1,64 @@
-<aside class="profile-card">
-  <header>
-    <!-- here’s the avatar -->
-    <a target="_blank" href="#">
-      <img src="http://lorempixel.com/150/150/people/" class="hoverZoomLink">
-    </a>
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Edit Profile</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Username">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Email address" type="email">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Fist Name" type="text">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Last Name" type="text">
+                  </mat-form-field>
+                </div>
+              </div>
+              <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Profile</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
 
-    <!-- the username -->
-    <h1>
-            John Doe
-          </h1>
 
-    <!-- and role or location -->
-    <h2>
-            Better Visuals
-          </h2>
+      <!-- <div class="col-md-4">
+        <div class="card card-profile">
+          <div class="card-body">
+            <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+            <h4 class="card-title">Alec Thompson</h4>
+            <p class="card-description">
+              Don't be scared of the truth because we need to restart the human foundation in truth And I love you like
+              Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+            </p>
+            <a class="btn btn-danger btn-round">Follow</a>
+          </div>
+        </div>
+      </div> -->
 
-  </header>
 
-  <!-- bit of a bio; who are you? -->
-  <div class="profile-bio">
-
-    <p>
-      It takes monumental improvement for us to change how we live our lives. Design is the way we access that improvement.
-    </p>
-
+    </div>
   </div>
-
-  <!-- some social links to show off -->
-  <ul class="profile-social-links">
-    <li>
-      <a target="_blank" href="https://www.facebook.com/creativedonut">
-        <i class="fa fa-facebook"></i>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://twitter.com/dropyourbass">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://github.com/vipulsaxena">
-        <i class="fa fa-github"></i>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://www.behance.net/vipulsaxena">
-       
-        <i class="fa fa-behance"></i>
-      </a>
-    </li>
-  </ul>
-</aside>
+</div>
