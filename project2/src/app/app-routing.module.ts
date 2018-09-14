@@ -1,12 +1,18 @@
+import { ChatboxComponent } from './chatbox/chatbox.component';
+import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { RegistrationComponent } from './registration/registration.component';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 
-import { RouterModule, Routes } from '@angular/router';
 
 export const routes: Routes = [
-  {path: '', redirectTo: 'Dashboard', pathMatch: 'full'},
+  {path: '', redirectTo: 'Login', pathMatch: 'full'},
+  {path: 'Login', component: LoginComponent},
+  {path: 'Registration', component: RegistrationComponent},
+  {path: 'Chatbox', component: ChatboxComponent},
   {path: 'Dashboard', component: DashboardComponent},
   {path: 'Profile', component: ProfileComponent}
 ];
@@ -19,4 +25,5 @@ export const routes: Routes = [
   exports: [RouterModule],
   declarations: []
 })
+
 export class AppRoutingModule { }

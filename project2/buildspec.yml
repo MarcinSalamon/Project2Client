@@ -1,0 +1,19 @@
+version: 0.1
+phases:
+    install:
+        commands:
+            - echo Installing source NPM dependencies...
+            - npm install
+            - npm install -g @angular/cli
+    build:
+        commands:
+            - echo Build started on `date`
+            - ng build --prod
+    post_build:
+         commands:
+            - aws s3 sync --delete dist/project2 s3://sudoskype
+artifacts:
+    files:
+        - '**/*'
+    base-directory: 'project2*'
+    discard-paths: yes
