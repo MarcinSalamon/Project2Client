@@ -40,24 +40,24 @@
     <div class="inputcontainer">
 
       <mat-form-field style="width: 100%">
-        <input matInput placeholder="Username">
+        <input matInput [(ngModel)]="this.usr" placeholder="Username">
       </mat-form-field>
     </div>
 
     <div class="inputcontainer">
       <mat-form-field style="width: 100%">
-        <input matInput type="password" placeholder="Password">
+        <input matInput [(ngModel)]="this.pw" type="password" placeholder="Password">
       </mat-form-field>
     </div>
 
-    <button mat-raised-button color="primary" class="loginbtn">Login</button>
+    <button mat-raised-button color="primary" class="loginbtn" (click)="login()">Login</button>
     <button mat-raised-button color="accent" class="registerbtn" routerLink="/Registration" >Register</button>
     <br><br>
 
     
-    <!-- <div *ngIf="message" class="alert alert-danger">{{message}}</div>
+    <div *ngIf="message" class="alert alert-danger">{{message}}</div>
     <div *ngIf="!isValid" class="alert alert-danger" id="formError">
       User Info Incorrect! Please try again
-    </div> -->
+    </div>
   </div>
 </div>

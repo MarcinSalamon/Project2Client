@@ -19,6 +19,13 @@ export class UserService {
   constructor(private http: HttpClient) { }
   subscribers: BehaviorSubject<User> = new BehaviorSubject<User>(null);
 
+  loginUser(creds: string[]): Observable<User> {
+    console.log(`Validating user: ${creds[0]}`);
+    // sent request to server
+    const json = JSON.stringify(creds);
+    return this.http.post<User>(environment.apiUrl + 'login', json, HTTP_OPTIONS);
+  }
+
   updateUser(u_id, email, fname, lname) {
     const user = {
       u_id: u_id,
@@ -35,6 +42,12 @@ export class UserService {
     const json = JSON.stringify(user);
     // stringify data and send it to server
     return this.http.post<User>(environment.apiUrl + 'register', json, HTTP_OPTIONS);
+  }
+
+  getAllUsers() {
+    console.log('In UserService.getAllUsers()');
+    const json = '';
+    return this.http.post<User[]>(environment.apiUrl + 'user', json, HTTP_OPTIONS);
   }
 
 }

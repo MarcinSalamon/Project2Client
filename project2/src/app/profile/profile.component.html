@@ -1,66 +1,82 @@
-<div class="catbg">
-<div class="main-content">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-header card-header-danger">
-            <h4 class="card-title">Edit Profile</h4>
-          </div>
-          <div class="card-body">
-            <form>
-              <div class="row">
-                <div class="col-md-12">
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Username">
-                  </mat-form-field>
+<div class="wrapper">
+  <!-- <div class="nav-container"> -->
+  <div class="nav-container">
+    <nav class="navbar navbar-expand-lg header">
+      <a routerLink="landing">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tomcat-logo.svg/2000px-Tomcat-logo.svg.png"
+          height="36" />
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      </div>
+      <button mat-mini-fab class="matbtn" (click)="sidenav.open()">
+        <fa name="users"></fa>
+      </button>
+      <button mat-mini-fab class="matbtn" routerLink="../Dashboard">
+        <fa name="comments"></fa>
+      </button>
+      <button mat-mini-fab class="matbtn" routerLink="../Profile">
+        <fa name="cogs"></fa>
+      </button>
+      <a class="navbtn" (click)="logout()" routerLink="">
+        <fa name="sign-out"></fa>
+      </a>
+    </nav>
+  </div>
+</div>
+
+<mat-sidenav-container (backdropClick)="close('backdrop')">
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <app-friends-list></app-friends-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="catbg">
+      <div class="main-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-danger">
+                  <h4 class="card-title">Edit Profile</h4>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Username">
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Email address" type="email">
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <mat-form-field class="example-full-width">
+                          <input matInput placeholder="First Name" type="text">
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Last Name" type="text">
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Profile</button>
+                    <div class="clearfix"></div>
+                  </form>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Email address" type="email">
-                  </mat-form-field>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="First Name" type="text">
-                  </mat-form-field>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Last Name" type="text">
-                  </mat-form-field>
-                </div>
-              </div>
-              <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Profile</button>
-              <div class="clearfix"></div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
-
-
-      <!-- <div class="col-md-4">
-        <div class="card card-profile">
-          <div class="card-body">
-            <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-            <h4 class="card-title">Alec Thompson</h4>
-            <p class="card-description">
-              Don't be scared of the truth because we need to restart the human foundation in truth And I love you like
-              Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-            </p>
-            <a class="btn btn-danger btn-round">Follow</a>
-          </div>
-        </div>
-      </div> -->
-
-
     </div>
-  </div>
-</div>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
