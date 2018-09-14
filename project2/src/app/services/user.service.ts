@@ -17,6 +17,7 @@ const HTTP_OPTIONS = {
 export class UserService {
 
   constructor(private http: HttpClient) { }
+  subscribers: BehaviorSubject<User> = new BehaviorSubject<User>(null);
 
   updateUser(u_id, email, fname, lname) {
     const user = {
@@ -28,9 +29,6 @@ export class UserService {
 
     return this.http.put<User>(environment.apiUrl, user);
   }
-  subscribers: BehaviorSubject<User> = new BehaviorSubject<User>(null);
-
-  constructor(private http: HttpClient) { }
 
   registerUser(user: User): Observable<User> {
     console.log(`Registering user: ${user.username}`);

@@ -11,7 +11,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material';
 import { FriendsListComponent } from './friends-list/friends-list.component';
 import { MatInputModule } from '@angular/material/input';
 import { RegistrationComponent } from './registration/registration.component';
@@ -27,7 +26,7 @@ import { AppRoutingModule } from './/app-routing.module';
     NavbarComponent,
     ProfileComponent,
     DashboardComponent,
-    FriendsListComponent
+    FriendsListComponent,
     RegistrationComponent,
     ChatboxComponent,
     LoginComponent
