@@ -7,6 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { ProfileComponent } from './profile/profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material';
+import { FriendsListComponent } from './friends-list/friends-list.component';
 import { MatInputModule } from '@angular/material/input';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -19,6 +25,9 @@ import { AppRoutingModule } from './/app-routing.module';
   declarations: [
     AppComponent,
     NavbarComponent,
+    ProfileComponent,
+    DashboardComponent,
+    FriendsListComponent
     RegistrationComponent,
     ChatboxComponent,
     LoginComponent
@@ -28,12 +37,13 @@ import { AppRoutingModule } from './/app-routing.module';
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    AngularFontAwesomeModule
+    AppRoutingModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    AngularFontAwesomeModule,
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFontAwesomeModule,
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,39 @@
-<app-navbar></app-navbar>
-<div>
-    <router-outlet></router-outlet>
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<div class="wrapper">
+    <!-- <div class="nav-container"> -->
+    <div class="nav-container">
+        <nav class="navbar navbar-expand-lg header">
+            <a routerLink="landing">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tomcat-logo.svg/2000px-Tomcat-logo.svg.png"
+                    height="36" />
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            </div>
+            <button mat-mini-fab class="matbtn" (click)="sidenav.open()">
+                <fa name="users"></fa>
+            </button>
+            <button mat-mini-fab class="matbtn" routerLink="">
+                <fa name="comments"></fa>
+            </button>
+            <button mat-mini-fab class="matbtn" routerLink="Profile">
+                <fa name="cogs"></fa>
+            </button>
+            <a class="navbtn" routerLink="">
+                <fa name="sign-out"></fa>
+            </a>
+        </nav>
+    </div>
 </div>
+
+<mat-sidenav-container (backdropClick)="close('backdrop')">
+    <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+        <p><button mat-button (click)="close('toggle button')">Toggle</button></p>
+        <app-friends-list></app-friends-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

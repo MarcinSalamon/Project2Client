@@ -1,0 +1,10 @@
+.fullsizeimg {
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.bg {
+    background: #ecece6;
+    padding-bottom: 47px;
+}
