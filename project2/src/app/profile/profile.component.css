@@ -1,0 +1,43 @@
+.main-content {
+    margin: auto ;
+    width: 330px;
+    padding: 30px 15px;
+    min-height: calc(100vh - 186px);
+}
+
+.card {
+    border: 0;
+    border-radius: 6px;
+    color: #333;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    font-size: .875rem;
+}
+
+.card-header {
+    border-radius: 3px;
+    padding: 15px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(244,67,54,.4);
+    background: linear-gradient(60deg,#ef5350,#e53935);
+    margin: -20px 15px 0px;
+    position: relative;
+    color: #fff;
+    border-bottom: none;
+    z-index: 3!important;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.catbg {
+    background: url("https://s22.postimg.cc/inhpoj0ch/cat1.jpg") no-repeat fixed center;
+    padding-top: 100px;
+    padding-right: 20px;
+}
