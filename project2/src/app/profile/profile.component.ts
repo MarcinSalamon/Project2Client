@@ -12,16 +12,16 @@ export class ProfileComponent implements OnInit {
 
 user: User;
 
-  constructor(private currentUser: CurrentUserService, private userService: UserService) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  updateUser(email, fname, lname) {
-    const id = this.user.uId;
-    this.userService.updateUser(id, email, fname, lname)
-      .subscribe(user => this.user = user);
-    this.currentUser.setCurrentUser(this.user);
-  }
+  // updateUser(email, fname, lname) {
+  //   const id = this.user.uId;
+  //   this.userService.updateUser(id, email, fname, lname)
+  //     .subscribe(user => this.user = user);
+  //   this.currentUser.setCurrentUser(this.user);
+  // }
 
 }

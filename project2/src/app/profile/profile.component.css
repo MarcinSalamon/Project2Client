@@ -1,6 +1,6 @@
 .main-content {
-    margin: 130px auto 0px;
-    width: 500px;
+    margin: auto ;
+    width: 330px;
     padding: 30px 15px;
     min-height: calc(100vh - 186px);
 }
@@ -34,4 +34,10 @@
 
 .mat-form-field {
     width: 100%;
+}
+
+.catbg {
+    background: url("https://s22.postimg.cc/inhpoj0ch/cat1.jpg") no-repeat fixed center;
+    padding-top: 100px;
+    padding-right: 20px;
 }
