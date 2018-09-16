@@ -12,10 +12,7 @@ body {
 
 .container {
   position: relative;
-  margin: 12%;
-  margin-left:320px;
-  width: 820px;
-  height: 550px;
+  height: 703px;
 }
 
 .messages {
@@ -99,12 +96,7 @@ body {
 }
 
 .chatbox {
-  position: absolute;
-  left: 35%;
-  height: 75%;
-  width: 60%;
-  border-radius: 10px;
-  box-shadow: 5px 5px 15px rgba(119, 119, 119, 0.5);
+  height: 92%;
 }
 
 .top-bar {
@@ -185,15 +177,15 @@ body {
   top: 60px;
   height: 80%;
 }
-
-.incoming {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  padding: 20px;
-}
-.incoming .bubble {
+.bubble1 {
   background: #b2b2b2;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #f9fbff;
+  font-size: 1em;
+  padding: 10px 10px 10px 12px;
+  border-radius: 20px;
 }
 
 .typing {
@@ -242,23 +234,18 @@ body {
 }
 
 .outgoing {
-  position: absolute;
   padding: 20px;
-  right: 0;
-  top: 15%;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 .outgoing .bubble {
   background: #79c7c5;
-  float: right;
 }
 
 .bottom-bar {
   position: absolute;
   width: 100%;
   height: 55px;
-  bottom: 0;
   background: #f9fbff;
   border-radius: 0 0 10px 10px;
 }
@@ -339,4 +326,8 @@ footer a:hover {
     transform: translateY(0px);
     opacity: 0.5;
   }
+}
+
+.chat-input {
+  width: 100%; 
 }

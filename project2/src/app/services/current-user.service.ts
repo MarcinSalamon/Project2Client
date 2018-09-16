@@ -12,12 +12,9 @@ export class CurrentUserService {
 
  setCurrentUser(user: User) {
    this.user = user;
-   console.log(user);
-   console.log(this.user);
  }
 
  getCurrentUser() {
-   console.log(this.user);
    return this.user;
  }
 }

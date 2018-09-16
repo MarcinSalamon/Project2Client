@@ -6,5 +6,5 @@ export class User {
     email: string;
     username: string;
     friendsListId: string;
-    onlineStatus: boolean;
+    onlineStatus: number;
 }

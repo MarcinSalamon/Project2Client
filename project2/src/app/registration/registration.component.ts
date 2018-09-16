@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { User } from '../models/user';
 import { UserService } from '../services/user.service';
+import { Router } from '@angular/router';
 
 /**
  * @title Input with error messages
@@ -43,17 +44,22 @@ export class RegistrationComponent implements OnInit {
   confirmPasswordFormControl = new FormControl('', [
     Validators.required
   ]);
-  constructor(private userService: UserService) { }
+
+  onlineStatus = new FormControl('', [
+  ]);
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
   }
 
   register() {
+    this.user.onlineStatus = 2;
     this.userService.registerUser(this.user).subscribe(u => {
       this.userService.subscribers.next(u);
       localStorage.setItem('user', JSON.stringify(u));
       // store key, value pair
       console.log(`User, ${this.user.username}, successfully registered`);
+      this.router.navigate(['Login']);
     });
   }
 

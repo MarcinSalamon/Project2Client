@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Message } from '../models/message';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-chatbox',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatboxComponent implements OnInit {
 
-  constructor() { }
+  messages: Message[] = [];
+  message: Message;
+
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.loadMessages();
+  }
+
+  loadMessages() {
+    this.messages = [];
+    this.userService.getAllMessages().subscribe(m => {
+      this.messages = m;
+    });
   }
 
 }

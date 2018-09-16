@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   message = '';
-  loggedUser = localStorage.getItem('user');
   isValid = true;
   usr: string;
   pw: string;
@@ -34,6 +33,7 @@ export class LoginComponent implements OnInit {
         // handle delivered value
         localStorage.setItem('user', JSON.stringify(user));
         // store key, value pair
+        console.log(user);
         this.router.navigate(['Dashboard']);
       }
     });

@@ -18,9 +18,11 @@ export class ProfileComponent implements OnInit {
   users: User[] = [];
   user: User;
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService, private currentUser: CurrentUserService) { }
 
   ngOnInit() {
+    this.user = JSON.parse(localStorage.getItem('user'));
+    console.log(this.user);
   }
 
   close(reason: string) {
@@ -31,28 +33,18 @@ export class ProfileComponent implements OnInit {
   logout() {
     console.log('logging out');
     localStorage.clear();
+    this.userService.logoutStatus();
     this.router.navigate(['Login']);
     this.userService.subscribers.next(null);
   }
 
-  // updateUser(email, fname, lname) {
-  //   const id = this.user.uId;
-  //   this.userService.updateUser(id, email, fname, lname)
-  //     .subscribe(user => this.user = user);
-  //   this.currentUser.setCurrentUser(this.user);
-  // }
-
-  getUsername(user: User) {
-    const id = this.users.filter(u => {
-      return u.uId === user.uId;
-    })[0];
-    return `${id.username}`;
-  }
-
-  loadUsers() {
-    this.users = [];
-    this.userService.getAllUsers().subscribe(u => {
-      this.users = u;
+  updateUser(email, fname, lname) {
+    const id = this.user.uId;
+    const username = this.user.username;
+    const os = this.user.onlineStatus;
+    this.userService.updateUser(id, username, email, fname, lname, os).subscribe(user => {this.user = user;
+      console.log(this.user);
+      this.currentUser.setCurrentUser(this.user);
     });
   }
 

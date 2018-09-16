@@ -4,25 +4,25 @@
     <div class="bg">
       <form class="registration-form">
         <mat-form-field class="registration-full-width">
-          <input matInput placeholder="First Name" [formControl]="fnameFormControl">
+          <input matInput placeholder="First Name" [formControl]="fnameFormControl" [(ngModel)]="this.user.fname">
           <mat-error *ngIf="fnameFormControl.hasError('required')">
             First name is <strong>required</strong>
           </mat-error>
         </mat-form-field>
         <mat-form-field class="registration-full-width">
-          <input matInput placeholder="Last Name" [formControl]="lnameFormControl">
+          <input matInput placeholder="Last Name" [formControl]="lnameFormControl" [(ngModel)]="this.user.lname">
           <mat-error *ngIf="lnameFormControl.hasError('required')">
             Last name is <strong>required</strong>
           </mat-error>
         </mat-form-field>
         <mat-form-field class="registration-full-width">
-          <input matInput placeholder="Username" [formControl]="usernameFormControl">
+          <input matInput placeholder="Username" [formControl]="usernameFormControl" [(ngModel)]="this.user.username">
           <mat-error *ngIf="!usernameFormControl.hasError('minLength') || !usernameFormControl.hasError('maxLength')">
             Username must be 2-20 characters
           </mat-error>
         </mat-form-field>
         <mat-form-field class="registration-full-width">
-          <input matInput placeholder="Email" [formControl]="emailFormControl">
+          <input matInput placeholder="Email" [formControl]="emailFormControl" [(ngModel)]="this.user.email">
           <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
             Please enter a valid email address
           </mat-error>
@@ -31,7 +31,7 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field class="registration-full-width">
-          <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" [formControl]="passwordFormControl">
+          <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" [formControl]="passwordFormControl" [(ngModel)]="this.user.password">
           <mat-error *ngIf="!passwordFormControl.hasError('minLength') || !passwordFormControl.hasError('maxLength')">
             Password must be 3-20 characters
           </mat-error>
@@ -42,6 +42,9 @@
             Passwords don't match
           </mat-error>
         </mat-form-field>
+        <!-- <mat-form-field class="registration-full-width">
+          <input matInput value=2 [formControl]="onlineStatus" [(ngModel)]="this.user.onlineStatus">
+        </mat-form-field> -->
         <button style="border-radius:10px" mat-raised-button color="primary" (click)="register()">Register</button>
       </form>
     </div>
