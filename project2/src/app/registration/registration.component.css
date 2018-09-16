@@ -1,0 +1,108 @@
+.registration-form{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: auto;
+  /* margin-top: 100px; */
+}
+
+.registration-full-width{
+  width: 300px;
+  text-align: center;
+  margin-left: 44px;
+  /* color:rgb(236, 236, 26) */
+}
+
+/* body {
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  background-color: #282f44;
+} */
+
+.background {
+  background-color: #282f44;
+  height: 703px;
+  padding-top: 135px;
+}
+
+.bg{
+    background-color: #FFCA95;
+    max-width: 430px;
+    margin: auto 150px;
+    border-radius: 22px;
+    text-align: center;
+    padding: 10px;
+}
+
+.cat {
+  width: 150px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transition: 0.5s;
+}
+
+#blue {
+  left: 60%;
+}
+
+#gray {
+  left: 72%;
+}
+
+#yellow {
+  left: 66%;
+}
+
+#cats{
+  position: relative;
+}
+
+.circular-sb {
+  width: 380px;
+  border: 5px solid white;
+  padding: 100px 10px;
+  margin: -550px 0px 0px 800px;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: arial;
+  position: relative;
+  color: white;
+  background-color: grey;
+}
+
+.circle3 {
+  border: 5px solid white;
+  position: absolute;
+  width: 25px;
+  padding: 20px;
+  border-radius: 50%;
+  left: 30%;
+  top: 105%;
+}
+
+.circle3:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  padding: 20px;
+  border-radius: 50%;
+  right: 0px;
+  bottom: 0px;
+  background: grey;
+}
+
+.circle4 {
+  border: 5px solid white;
+  position: absolute;
+  width: 5px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  left: 30%;
+  top: 125%;
+  background-color: grey;
+}

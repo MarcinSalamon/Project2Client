@@ -1,0 +1,82 @@
+<div class="wrapper">
+  <!-- <div class="nav-container"> -->
+  <div class="nav-container">
+    <nav class="navbar navbar-expand-lg header">
+      <a routerLink="../Dashboard">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tomcat-logo.svg/2000px-Tomcat-logo.svg.png"
+          height="36" />
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      </div>
+      <button mat-mini-fab class="matbtn" (click)="sidenav.open()">
+        <fa name="users"></fa>
+      </button>
+      <button mat-mini-fab class="matbtn" routerLink="../Dashboard">
+        <fa name="comments"></fa>
+      </button>
+      <button mat-mini-fab class="matbtn" routerLink="../Profile">
+        <fa name="cogs"></fa>
+      </button>
+      <a class="navbtn" (click)="logout()" routerLink="">
+        <fa name="sign-out"></fa>
+      </a>
+    </nav>
+  </div>
+</div>
+
+<mat-sidenav-container (backdropClick)="close('backdrop')">
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <app-friends-list></app-friends-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="catbg">
+      <div class="main-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-danger">
+                  <h4 class="card-title">Edit Profile</h4>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <mat-form-field class="example-full-width">
+                          <input matInput #username placeholder="Username" value={{user.username}} readonly>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <mat-form-field class="example-full-width">
+                          <input matInput #email placeholder="Email address" type="email" value={{user.email}}>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <mat-form-field class="example-full-width">
+                          <input matInput #fname placeholder="First Name" type="text" value={{user.fname}}>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <mat-form-field class="example-full-width">
+                          <input matInput #lname placeholder="Last Name" type="text" value={{user.lname}}>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="updateUser(email.value, fname.value, lname.value)">Update Profile</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

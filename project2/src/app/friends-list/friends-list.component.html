@@ -1,0 +1,13 @@
+<ul id='friend-list'>
+  <li class='friend selected'>
+    <div id='title'>
+      Friends List
+    </div>
+  </li>
+  <li class='friend' *ngFor="let user of users">
+    <img src='https://png.icons8.com/windows/1600/github-2.png' />
+    <div class='name'>
+      {{user.username}}
+    </div>
+  </li>
+</ul>

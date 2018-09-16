@@ -1,0 +1,87 @@
+.main-content {
+    margin: auto ;
+    width: 330px;
+    padding: 30px 15px;
+    min-height: calc(100vh - 186px);
+}
+
+.card {
+    border: 0;
+    border-radius: 6px;
+    color: #333;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    font-size: .875rem;
+}
+
+.card-header {
+    border-radius: 3px;
+    padding: 15px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(244,67,54,.4);
+    background: linear-gradient(60deg,#ef5350,#e53935);
+    margin: -20px 15px 0px;
+    position: relative;
+    color: #fff;
+    border-bottom: none;
+    z-index: 3!important;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.catbg {
+    background: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX7280580.jpg") fixed center;
+    padding-top: 130px;
+}
+
+/* navbar */
+.header {
+	overflow: auto;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0px 2px 1px 0px rgba(102, 93, 93, 0.15);
+	padding-right: 24px;
+}
+
+.navbtn {
+	cursor: pointer;
+	padding: 6px 10px;
+	margin-right: 5px;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 1px;
+	background-color: transparent;
+	text-decoration: none;
+	border-color: #333;
+	color: #333;
+	opacity: 0.7;
+	float: right;
+}
+
+.navli {
+	padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 650;
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+}
+
+.underline:hover {
+	border-bottom: 2px solid #ff8600;
+}
+
+.cdk-focused {
+  display: none;
+}
+
+.matbtn {
+  margin-right: 5px;
+}
