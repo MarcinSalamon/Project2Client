@@ -18,6 +18,7 @@ export class ChatboxComponent implements OnInit {
   message: Message;
   conv: Conversation;
   user: User = JSON.parse(localStorage.getItem('user'));
+  t: User;
 
   constructor(private userService: UserService) { }
 
@@ -38,6 +39,7 @@ export class ChatboxComponent implements OnInit {
   loadMessages() {
     this.conv = JSON.parse(localStorage.getItem('conversation'));
     console.log(this.conv.cId);
+    this.t = JSON.parse(localStorage.getItem('talkto'));
     this.userService.getAllMessages(this.conv.cId).subscribe(m => {
       if (this.messages !== m) {
         this.messages = m;

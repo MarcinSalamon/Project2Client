@@ -26,8 +26,10 @@ export class FriendsListComponent implements OnInit {
     });
   }
 
-  openChat(id) {
-    console.log(id);
+  openChat(t) {
+    console.log(t);
+    console.log(t.uId);
+    localStorage.setItem('talkto', JSON.stringify(t));
     const u: User = JSON.parse(localStorage.getItem('user'));
     console.log(u.uId);
     this.userService.getConversationsByUId(u.uId).subscribe(conversations => {
@@ -35,14 +37,14 @@ export class FriendsListComponent implements OnInit {
       let found = false;
       conversations.forEach(c => {
         console.log(c);
-        if ((c.uId1 === id && c.uId2 === u.uId && !found) || (c.uId1 === u.uId && c.uId2 === id && !found)) {
+        if ((c.uId1 === t.uId && c.uId2 === u.uId && !found) || (c.uId1 === u.uId && c.uId2 === t.uId && !found)) {
           console.log('found a match');
           localStorage.setItem('conversation', JSON.stringify(c));
           found = true;
         }
       });
       if (!found) {
-        this.userService.createConversation(u.uId, id).subscribe(conversation => {
+        this.userService.createConversation(u.uId, t.uId).subscribe(conversation => {
           localStorage.setItem('conversation', JSON.stringify(conversation));
         });
       }

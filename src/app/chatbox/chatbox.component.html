@@ -33,7 +33,7 @@
     <div class="container">
       <div class="chatbox">
         <div class="top-bar">
-          <div class="name">{{this.user.username}}</div>
+          <div class="name">{{t.username}}</div>
         </div>
         <div class="outgoing" #scrollMe [scrollTop]="scrollMe.scrollHeight">
           <div *ngFor="let message of messages">
