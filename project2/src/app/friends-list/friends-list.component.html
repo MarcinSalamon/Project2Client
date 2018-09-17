@@ -4,7 +4,7 @@
       Friends List
     </div>
   </li>
-  <li class='friend' *ngFor="let user of users">
+  <li class='friend' *ngFor="let user of users" (click)="openChat(user.uId)">
     <img src='https://png.icons8.com/windows/1600/github-2.png' />
     <div class='name'>
       {{user.username}}
