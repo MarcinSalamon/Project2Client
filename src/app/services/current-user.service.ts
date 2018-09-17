@@ -12,7 +12,6 @@ export class CurrentUserService {
 
  setCurrentUser(user: User) {
    this.user = user;
-   console.log('in currentuser service: ' + this.user);
  }
 
  getCurrentUser() {
