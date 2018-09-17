@@ -11,9 +11,9 @@ phases:
             - ng build --prod
     post_build:
          commands:
-            - aws s3 sync --delete dist/project2 s3://sudoskype
+            - aws s3 sync --delete dist s3://sudoskype
 artifacts:
     files:
         - '**/*'
-    base-directory: 'project2*'
+    base-directory: 'dist*'
     discard-paths: yes
