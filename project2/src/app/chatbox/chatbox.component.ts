@@ -36,11 +36,12 @@ export class ChatboxComponent implements OnInit {
   }
 
   loadMessages() {
-    this.messages = [];
     this.conv = JSON.parse(localStorage.getItem('conversation'));
     console.log(this.conv.cId);
     this.userService.getAllMessages(this.conv.cId).subscribe(m => {
-      this.messages = m;
+      if (this.messages !== m) {
+        this.messages = m;
+      }
     });
   }
 
