@@ -584,10 +584,7 @@
 	color: #333;
 	text-decoration: none;
 	vertical-align: middle;
-  z-index: 0;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 15px 15px 0px;
-  border-radius: 10px;
+	z-index: 0;
 }
 
 .logincard:before {

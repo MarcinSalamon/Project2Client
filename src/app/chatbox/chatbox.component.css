@@ -12,7 +12,7 @@ body {
 
 .container {
   position: relative;
-  height: 646px;
+  height: 703px;
 }
 
 .messages {
@@ -96,7 +96,7 @@ body {
 }
 
 .chatbox {
-  height: 90%;
+  height: 92%;
 }
 
 .top-bar {
@@ -236,7 +236,6 @@ body {
 .outgoing {
   padding: 20px;
   width: 100%;
-  height: 90%;
   overflow: auto;
 }
 .outgoing .bubble {
@@ -245,7 +244,7 @@ body {
 
 .bottom-bar {
   position: absolute;
-  width: 97%;
+  width: 100%;
   height: 55px;
   background: #f9fbff;
   border-radius: 0 0 10px 10px;
@@ -275,9 +274,21 @@ input:focus {
   outline: 0;
 }
 
+button {
+  position: absolute;
+  border: 0;
+  font-size: 1em;
+  color: #a1e2d9;
+  top: 19px;
+  opacity: 0.8;
+  right: 17px;
+  cursor: pointer;
+  outline: 0;
+}
 button:hover {
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
+  color: #79c7c5;
 }
 
 footer {
@@ -319,49 +330,4 @@ footer a:hover {
 
 .chat-input {
   width: 100%; 
-}
-
-/* navbar */
-.header {
-	overflow: auto;
-	position: relative;
-	z-index: 1;
-	box-shadow: 0px 2px 1px 0px rgba(102, 93, 93, 0.15);
-	padding-right: 24px;
-}
-
-.navbtn {
-	cursor: pointer;
-	padding: 6px 10px;
-	margin-right: 5px;
-	border-radius: 50%;
-	border-style: solid;
-	border-width: 1px;
-	background-color: transparent;
-	text-decoration: none;
-	border-color: #333;
-	color: #333;
-	opacity: 0.7;
-	float: right;
-}
-
-.navli {
-	padding: 8px 14px;
-    text-transform: uppercase;
-    font-weight: 650;
-	font-size: 14px;
-	text-decoration: none;
-	color: #000;
-}
-
-.underline:hover {
-	border-bottom: 2px solid #ff8600;
-}
-
-.cdk-focused {
-  display: none;
-}
-
-.matbtn {
-  margin-right: 5px;
 }
