@@ -4,6 +4,7 @@ import { Message } from '../models/message';
 import { User } from '../models/user';
 import { UserService } from '../services/user.service';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chatbox',
@@ -20,7 +21,7 @@ export class ChatboxComponent implements OnInit {
   user: User = JSON.parse(localStorage.getItem('user'));
   t: User;
 
-  constructor(private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
     // this.loadMessages();
@@ -57,6 +58,20 @@ export class ChatboxComponent implements OnInit {
     this.userService.sendMessage(mess).subscribe(m => this.messages.push(m));
     console.log(message);
     this.message = null;
+  }
+
+  logout() {
+    console.log('logging out');
+    const id = this.user.uId;
+    const username = this.user.username;
+    const os = 2;
+    const fname = this.user.fname;
+    const lname = this.user.lname;
+    const email = this.user.email;
+    this.userService.logoutStatus(id, username, email, fname, lname, os);
+    localStorage.clear();
+    this.router.navigate(['Login']);
+    this.userService.subscribers.next(null);
   }
 
 }
