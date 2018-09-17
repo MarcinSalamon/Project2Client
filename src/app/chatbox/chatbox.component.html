@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="chatbox">
+    <div class="top-bar">
+      <div class="name">Rick</div>
+    </div>
+    <div class="outgoing">
+      <div *ngFor="let message of messages">
+        <div class="bubble" *ngIf="this.message.messageUserId == 2" style="margin-left: 90%;">{{message.message}}</div>
+        <div class="bubble1" *ngIf="this.message.messageUserId == 9">{{message.message}}</div>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <mat-form-field class="chat-input">
+          <input matInput 
+                 #inputMessage 
+                 maxlength="140" 
+                 placeholder="your message" 
+                 [(ngModel)]="messageContent" 
+                 (keyup.enter)="sendMessage(messageContent)">
+          <mat-hint align="end">{{inputMessage.value.length}}/140</mat-hint>
+        </mat-form-field>
+    </div>
+  </div>
+</div>
