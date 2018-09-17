@@ -30,10 +30,24 @@ export class ProfileComponent implements OnInit {
     this.sidenav.close();
   }
 
+  // logout() {
+  //   console.log('logging out');
+  //   this.userService.logoutStatus(this.user);
+  //   localStorage.clear();
+  //   this.router.navigate(['Login']);
+  //   this.userService.subscribers.next(null);
+  // }
+
   logout() {
     console.log('logging out');
+    const id = this.user.uId;
+    const username = this.user.username;
+    const os = 2;
+    const fname = this.user.fname;
+    const lname = this.user.lname;
+    const email = this.user.email;
+    this.userService.logoutStatus(id, username, email, fname, lname, os);
     localStorage.clear();
-    this.userService.logoutStatus();
     this.router.navigate(['Login']);
     this.userService.subscribers.next(null);
   }
@@ -42,9 +56,13 @@ export class ProfileComponent implements OnInit {
     const id = this.user.uId;
     const username = this.user.username;
     const os = this.user.onlineStatus;
-    this.userService.updateUser(id, username, email, fname, lname, os).subscribe(user => {this.user = user;
-      console.log(this.user);
+    this.userService.updateUser(id, username, email, fname, lname, os).subscribe(user => {
+      this.user.email = email;
+      this.user.fname = fname;
+      this.user.lname = lname;
       this.currentUser.setCurrentUser(this.user);
+      console.log(this.user);
+      localStorage.setItem('user', JSON.stringify(this.user));
     });
   }
 
